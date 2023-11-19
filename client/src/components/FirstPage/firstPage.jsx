@@ -1,12 +1,25 @@
-const firstPage = () => {
-  return (
-  <div>
+import { useNavigate } from "react-router-dom";
+
+const FirstPage = () => {
+
+  const navigate = useNavigate();
+  
+const handleOnClick = () => {
+    navigate('home');
+  }
+
+
+  return(
+    <div>
       <h1>
-        Bienvenido a mis PokeHUEVOS
+      Bienvenidos a mis pokehuevos
       </h1>
-  </div>
-  )
+  
+      <button onClick={handleOnClick}>Ingresar</button>
+
+    </div>
+
+  );
 }
 
-
-export default firstPage;
+export default FirstPage;
