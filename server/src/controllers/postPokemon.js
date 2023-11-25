@@ -23,8 +23,8 @@ const postPokemon = async (req, res) => {
       velocidad,
       altura,
       peso,
+      tipo,
     });
-
     //! ACA PODEMOS OBSERVAR LA ASOCIACION DE UN TIPO DE POKEMON DE LA DB CON UN POKEMON RECIEN CREADO!
 
     await Promise.all(

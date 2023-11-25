@@ -1,0 +1,71 @@
+.busqueda {
+    position: relative;
+    background: linear-gradient(135deg, #5a9367 0%, #5a9367 100%);
+    border-radius: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 0;
+  }
+.botones{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+  .search {
+    position: relative;
+    width: 100%;
+    border-radius: 50px;
+    background: #5a9367;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+  .input {
+    padding: 10px;
+    width: 100%;
+    background: #5a9367;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 50px;
+    outline: none;
+  }
+
+  .input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+  .buscar {
+    background: #5a9367;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  }
+
+  .salir {
+    background: #ad0909;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    margin-left: 10px;
+  }
+
+
+  .buscar:hover, .salir:hover,
+  .buscar:active, .salir:active {
+    background: #3d4740;
+  }

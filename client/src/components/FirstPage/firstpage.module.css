@@ -1,0 +1,86 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:url(bg.jpg);
+    height: 100vh;
+}
+
+ button.efecto{
+    margin-top: 25rem;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+  }
+
+  .efecto {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #eaf5e7;
+    border: 2px solid #5a9367;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  .efecto::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #c3ecc1;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px #5a9367, 0 0.625em 0 0 #d9f3d1;
+    box-shadow: 0 0 0 2px #5a9367, 0 0.625em 0 0 #d9f3d1;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  .efecto:hover {
+    background: #d9f3d1;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+  }
+
+  .efecto:hover::before {
+    -webkit-box-shadow: 0 0 0 2px #5a9367, 0 0.5em 0 0 #d9f3d1;
+    box-shadow: 0 0 0 2px #5a9367, 0 0.5em 0 0 #d9f3d1;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+  }
+
+  .efecto:active {
+    background: #d9f3d1;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+  }
+
+  .efecto:active::before {
+    -webkit-box-shadow: 0 0 0 2px #5a9367, 0 0 #d9f3d1;
+    box-shadow: 0 0 0 2px #5a9367, 0 0 #d9f3d1;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+  }
+
+  .title{
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--fuentePrincipal);
+    color: #eaf5e7;
+    text-shadow: 2px 5px 7px #000000;
+  }

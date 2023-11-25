@@ -1,0 +1,185 @@
+body{
+  overflow-x: hidden;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(90, 147, 103, 1);
+  width: 100%;
+  height: 100%;
+  --s: 194px;
+  --c1: #f6edb3;
+  --c2: #acc4a3;
+
+  --_l: #0000 calc(25% / 3), var(--c1) 0 25%, #0000 0;
+  --_g: conic-gradient(from 120deg at 50% 87.5%, var(--c1) 120deg, #0000 0);
+
+  background: var(--_g), var(--_g) 0 calc(var(--s) / 2),
+    conic-gradient(from 180deg at 75%, var(--c2) 60deg, #0000 0),
+    conic-gradient(from 60deg at 75% 75%, var(--c1) 0 60deg, #0000 0),
+    linear-gradient(150deg, var(--_l)) 0 calc(var(--s) / 2),
+    conic-gradient(
+      at 25% 25%,
+      #0000 50%,
+      var(--c2) 0 240deg,
+      var(--c1) 0 300deg,
+      var(--c2) 0
+    ),
+    linear-gradient(-150deg, var(--_l)) #55897c /* third color here */;
+  background-size: calc(0.866 * var(--s)) var(--s);
+}
+
+
+.contenedor a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.btnCrear{
+  background-color: rgba(90, 147, 103, 1);
+  padding: .5rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.btnCrear:hover{
+  background-color: #3d4740;
+}
+
+.filters {
+  background-color: rgba(189, 189, 189, 0.507);
+  color: #000000;
+  margin-bottom: 20px;
+  display: flex;
+  margin: 0;
+  margin-top: 1rem;
+  width: 80%;
+  box-shadow: 10px 10px 10px rgba(3, 3, 3,.5);
+  border-radius: 2px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.filters select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(90, 147, 103, 1);
+  color: white;
+}
+.filters select:focus{
+  background-color: rgba(90, 147, 103, 1);
+  color: white;
+}
+
+
+
+
+hr {
+  border: 1px solid #000000;
+  margin: 20px 0;
+  width: 100%;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  margin: 5rem;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
+}
+
+.card::after {
+  content: "Detalles";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: rgba(90, 147, 103, 1);
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.card .price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  border-radius: 5px;
+  font-weight: 400;
+  color: #000;
+}
+
+.card .title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  text-align: center;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.card:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card:active::after {
+  content: "Ingresando..";
+  height: 3.125em;
+}
+
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.pages {
+  background-color: rgba(90, 147, 103, 1);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pages:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

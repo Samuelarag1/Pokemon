@@ -36,6 +36,9 @@ export const userSlice = createSlice({
         return 0;
       });
     },
+    // UBIC: (state, action) => {
+
+    // }
   },
 });
 
